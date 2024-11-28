@@ -3,6 +3,7 @@ import unittest
 from points import Point
 from circles import Circle
 
+
 class TestCircle(unittest.TestCase):
 
     def test__init__(self):
@@ -35,7 +36,7 @@ class TestCircle(unittest.TestCase):
 
     def test_area(self):
         circle = Circle(0, 0, 5)
-        expected_area = math.pi * 5**2
+        expected_area = math.pi * 5 ** 2
         self.assertEqual(circle.area(), expected_area)
 
     def test_move(self):
@@ -119,6 +120,7 @@ class TestCircle(unittest.TestCase):
         assert circle.topright == Point(5, 5)
         assert circle.bottomleft == Point(-5, -5)
         assert circle.bottomright == Point(5, -5)
+
 
 if __name__ == '__main__':
     unittest.main()

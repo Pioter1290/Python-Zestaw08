@@ -1,6 +1,7 @@
 import math
 import unittest
 
+
 class Point:
     def __init__(self, x, y):
         self.x = x
@@ -16,7 +17,7 @@ class Point:
         return (self.x, self.y) == (other.x, other.y)
 
     def __ne__(self, other):
-        return (self.x,self.y) != (other.x,other.y)
+        return (self.x, self.y) != (other.x, other.y)
 
     def __add__(self, other):
         return Point(self.x + other.x, self.y + other.y)
@@ -31,7 +32,7 @@ class Point:
         return self.x * other.y - self.y * other.x
 
     def length(self):
-        return math.sqrt(self.x**2 + self.y**2)
+        return math.sqrt(self.x ** 2 + self.y ** 2)
 
     def __hash__(self):
         return hash((self.x, self.y))
@@ -82,7 +83,6 @@ class TestPoint(unittest.TestCase):
         self.assertFalse(p1 != p2)
         self.assertTrue(p3 != p4)
         self.assertTrue(p5 != p6)
-
 
     def test__add__(self):
         p1 = Point(1, 2)
